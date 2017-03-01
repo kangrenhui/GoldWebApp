@@ -1,0 +1,20 @@
+/**
+ * 公共部分
+ */
+#header{
+	background-color: #0000FF;
+}
+
+#menu{
+	height: 800px;
+	background-color: #0074D9;
+}
+
+#header >.topbar{
+	height: 64px;
+	text-align: center;
+	line-height: 64px;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 18px;
+}

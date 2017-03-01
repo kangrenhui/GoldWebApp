@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<!--
+         	作者：kangrenhui@126.com
+         	时间：2017-03-01
+         	描述：ie浏览器使用最新内核
+         -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-01
+        	描述：视口的作用：当在浏览器中，页面宽度超出设备，浏览器虚拟一个页面容器，页面容器缩放到设备那么大，放到手机屏幕上展示。
+        		 目前大多数浏览器的视口（承载页面的容器）宽度都是980
+        		 width: 显示的宽度
+        		 initaial-scale: 初始缩放大小
+        		 user-scalable : 用户能否缩放
+        		 minimum-scalable : 最小缩放
+        		 maximum-scalable : 最大缩放
+        -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      		<script src="lib/html5shiv/html5shiv.min.js"></script>
+      		<script src="lib/respond/respond.min.js"></script>
+    		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>微金所</title>
+
+	</head>
+
+	<body>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-01
+        	描述：container 不同的宽度下 container的宽度是不一样的
+        -->
+
+		<header id="header">
+			<div class="topbar">
+				<div class="container">
+					我的一个公众App
+				</div>
+			</div>
+		</header>
+		<section id="menu">
+			<div class="menu_btn">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">第一个menu</div>
+						<div class="col-md-4">第二个menu</div>
+						<div class="col-md-4">第三个menu</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+
+	</body>
+
+</html>
