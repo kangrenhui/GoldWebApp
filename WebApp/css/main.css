@@ -1,54 +1,197 @@
 /**
+ * bootstrap扩展样式
+ */
+
+.btn-register {
+	color: white;
+	background-color: darkred;
+	border-color: #ccc;
+}
+
+.btn-register:focus,
+.btn-register.focus {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #8c8c8c;
+}
+
+.btn-register:hover {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open> .dropdown-toggle.btn-register {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+.btn-register:active:hover,
+.btn-register.active:hover,
+.open> .dropdown-toggle.btn-register:hover,
+.btn-register:active:focus,
+.btn-register.active:focus,
+.open> .dropdown-toggle.btn-register:focus,
+.btn-register:active.focus,
+.btn-register.active.focus,
+.open> .dropdown-toggle.btn-register.focus {
+	color: #333;
+	background-color: #d4d4d4;
+	border-color: #8c8c8c;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open> .dropdown-toggle.btn-register {
+	background-image: none;
+}
+
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled.focus,
+.btn-register[disabled].focus,
+fieldset[disabled] .btn-register.focus {
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.btn-register .badge {
+	color: #fff;
+	background-color: #333;
+}
+
+
+/**
  * 自定义公共级别的样式
  * 约定：
  * 1 样式都通过ID去限定，这样解决冲突的问题。
  * 2 尽可能多使用直接子代选择器，而非间接指代
  */
-body{
-	font-family: "Helvetica Neue", helvetica , microsoft yahei; 
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
 
-section{
+
+/**
+ * 声明一个字体
+ */
+
+@font-face {
+	font-family: 'itcast';
+	src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'), url('../font/MiFie-Web-Font.svg') format('svg'), url('../font/MiFie-Web-Font.ttf') format('truetype'), url('../font/MiFie-Web-Font.woff') format('woff');
+}
+
+
+/**
+ * 找到所有icon-开头的class类
+ * 找到所有class里面包含空格 icon-
+ * 把所有i标签的斜体属性去掉
+ */
+
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: itcast;
+	font-style: normal;
+}
+
+
+/**
+ * 用两个标签不是伪
+ * 字体图标
+ */
+
+.icon-mobilephone::before {
+	content: "\e908";
+	font-size: 13px;
+}
+
+.icon-telephone::before {
+	content: "\e909";
+	font-size: 15px;
+}
+
+.icon-logo::before {
+	content: "\e93e";
+}
+
+.icon-icon::before {
+	content: "\e920";
+}
+
+section {
 	height: 200px;
 	background-color: #fff;
 }
-/**
- * css基偶选择器
- */
-section:nth-of-type(2n + 1){
-	background-color: #F0AD4E;
-}
+
 
 /**
- * 头部区域
+ * css基偶选择器 预先划分块
  */
-#header{
 
+section:nth-of-type(2n+ 1) {
+	background-color: #D0E9C6;
 }
 
-#header .mobile_link:hover{
-	text-decoration:none;
+
+/**
+ * -----------------------------头部区域
+ */
+
+#header {}
+
+#header> .topbar {
+	line-height: 40px;
+	color: #C0C0C0;
+}
+
+
+/**
+ * +号选择器
+ * 被选择的元素
+ * 后面的所有兄弟节点，但是不包括选择到的元素
+ * 一般来说做列表分割线 都使用这个方式
+ */
+
+#header> .topbar> .container> .row> div+ div {
+	height: 40px;
+	border-left: 1px solid #c0c0c0;
+}
+
+
+/**
+ * 在hover的时候，把图片显示出来。
+ * 要把img标签写在a标签里面
+ */
+
+#header .mobile_link:hover {
+	text-decoration: none;
 	color: darkred;
 }
 
-#header .mobile_link > img{
+#header .mobile_link:hover> img {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -60px;
+	top: 28px;
+}
+
+
+/**
+ * a元素不受其他影响
+ */
+
+#header .mobile_link> img {
 	display: none;
+	color: #888;
 }
 
-#header .hover_image{
-	background-color: #222222;
-	height: 136px;
-}
-
-#header > .topbar{
-	line-height: 40px;
-	color: white;
-}
-
-#header > .topbar > .container{
-	height: 40px;
-}
-
-#header > .topbar > .container > .row > div:nth-last-of-type(2n){
-	height: 40px;
-}
+.btn-register {}
