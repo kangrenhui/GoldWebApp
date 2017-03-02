@@ -1,20 +1,54 @@
 /**
- * 公共部分
+ * 自定义公共级别的样式
+ * 约定：
+ * 1 样式都通过ID去限定，这样解决冲突的问题。
+ * 2 尽可能多使用直接子代选择器，而非间接指代
+ */
+body{
+	font-family: "Helvetica Neue", helvetica , microsoft yahei; 
+}
+
+section{
+	height: 200px;
+	background-color: #fff;
+}
+/**
+ * css基偶选择器
+ */
+section:nth-of-type(2n + 1){
+	background-color: #F0AD4E;
+}
+
+/**
+ * 头部区域
  */
 #header{
-	background-color: #0000FF;
+
 }
 
-#menu{
-	height: 800px;
-	background-color: #0074D9;
+#header .mobile_link:hover{
+	text-decoration:none;
+	color: darkred;
 }
 
-#header >.topbar{
-	height: 64px;
-	text-align: center;
-	line-height: 64px;
+#header .mobile_link > img{
+	display: none;
+}
+
+#header .hover_image{
+	background-color: #222222;
+	height: 136px;
+}
+
+#header > .topbar{
+	line-height: 40px;
 	color: white;
-	font-family: "微软雅黑";
-	font-size: 18px;
+}
+
+#header > .topbar > .container{
+	height: 40px;
+}
+
+#header > .topbar > .container > .row > div:nth-last-of-type(2n){
+	height: 40px;
 }
